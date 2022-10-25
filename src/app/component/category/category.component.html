@@ -1,0 +1,34 @@
+<!-- <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Kategori Numarası</th>
+        <th scope="col">Kategori Adı</th>
+       
+      </tr>
+    </thead>
+    <tbody *ngFor="let category of categories">
+      <tr>
+        
+
+        <td>
+            {{category.id }}
+        </td>
+
+        <td style="font-style: italic;">
+            {{category.categoryName }}
+        </td>
+        
+      </tr>
+      
+    </tbody>
+  </table>
+   -->
+  <div class="list-group">
+    <tbody *ngFor="let category of categories">
+    <a href="#" class="list-group-item list-group-item-action">
+        {{category.categoryName}}
+    </a>
+
+    </tbody>
+    
+  </div>
