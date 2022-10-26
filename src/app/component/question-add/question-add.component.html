@@ -1,0 +1,74 @@
+
+<div class="content" >
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header"><h5 class="title">Soru Ekle</h5></div>
+        <div class="card-body">
+          <form [formGroup]="questionAddForm">
+            <div class="mb-3">
+              <label for="description">Açıklama</label>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="description"
+                  formControlName="description"
+                  class="form-control"
+                  placeholder="Açıklama"
+                />
+              </div>
+            </div>
+  
+            <div class="mb-3">
+              <label for="categoryId">Kategori Numarası</label>
+                <div class="form-group">
+                  <input
+                    type="number"
+                    id="categoryId"
+                    formControlName="categoryId"
+                    class="form-control"
+                    placeholder="Kategori"
+                  />
+                </div>
+            </div>
+              
+            
+          
+            <div class="mb-3">
+              <label for="title">Başlık</label>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="title"
+                  formControlName="title"
+                  class="form-control"
+                  placeholder="Başlık"
+                />
+              </div>
+            </div>
+  
+            <!-- <div class="mb-3">
+              <label for="productName">Birim Fiyatı</label>
+              <div class="form-group">
+                <input
+                  type="number"
+                  id="unitPrice"
+                  formControlName="unitPrice"
+                  class="form-control"
+                  placeholder="Fiyatı"
+                />
+              </div>
+            </div> -->
+  
+          </form>
+        </div>
+        <div class="card-footer">
+          <button type="button" class="btn btn-success" (click)="add()">Ekle</button>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  

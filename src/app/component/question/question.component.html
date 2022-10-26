@@ -1,6 +1,9 @@
-
+<div class="mb-3">
+  <label for="filterText" class="form-label"></label>
+  <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="Soru Başlığı">
+</div>
   <div class="accordion" id="accordionExample">
-    <div class="accordion-item" *ngFor="let question of questions">
+    <div class="accordion-item" *ngFor="let question of questions | filterpipe:filterText">
       <h2 class="accordion-header" id="{{question.id}}">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           {{question.title}}

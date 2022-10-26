@@ -10,6 +10,8 @@ import { QuestionService } from 'src/app/service/question.service';
 })
 export class QuestionComponent implements OnInit {
   questions:Question[]=[]
+  filterText="";
+
   constructor(private questionService:QuestionService,private activatedRoute:ActivatedRoute) { }
  
   ngOnInit(): void {

@@ -1,0 +1,42 @@
+<div class="wrapper fadeInDown" style="  position: absolute;
+
+left: 30px;
+top: 20px;">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" id="icon" alt="User Icon" />
+      </div>
+  
+      <!-- email:string
+    password:string -->
+
+
+      <!-- Login Form -->
+      <form [formGroup]="loginForm">
+        <input 
+        formControlName="email"
+                 type="text"
+                id="email" 
+                class="fadeIn second" 
+                name="login" 
+                placeholder="Mail Adresiniz">
+        <input 
+        formControlName="password"
+                  type="text" 
+                  id="password" 
+                  class="fadeIn third" 
+                    name="login" 
+                    placeholder="password">
+        <input type="submit" class="fadeIn fourth" value="Log In"  (click)="login()">
+      </form>
+      
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Forgot Password?</a>
+      </div>
+  
+    </div>
+  </div>
