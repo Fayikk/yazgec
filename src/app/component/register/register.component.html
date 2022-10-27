@@ -1,61 +1,78 @@
-<body class="text-center">
-  <main class="form-signin">
-    <form [formGroup]="registerForm">
-      <h1 class="h3 mb-3 fw-normal">Giriş yap</h1>
+<div class="content">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header"><h5 class="title">Kaydol</h5></div>
+      <div class="card-body">
+        <form [formGroup]="registerForm">
 
-      <div class="form-floating">
-        <input
-          formControlName="email"
-          type="email"
-          class="form-control"
-          id="floatingInput"
-          placeholder="name@example.com"
-        />
-        <label for="floatingInput">E-posta</label>
-      </div>
+          <div class="mb-3">
+            <label for="email">E Mail</label>
+            <div class="form-group">
+              <input
+                type="string"
+                id="email"
+                formControlName="email"
+                class="form-control"
+                placeholder="mail"
+              />
+            </div>
+          </div>
 
-      <div class="form-floating">
-        <input
-        formControlName="password"
-          type="password"
-          class="form-control"
-          id="floatingPassword"
-          placeholder="Password"
-        />
-        <label for="floatingPassword">Parola</label>
-      </div>
+          <div class="mb-3">
+            <label for="password">Parola</label>
+              <div class="form-group">
+                <input
+                  type="string"
+                  id="password"
+                  formControlName="password"
+                  class="form-control"
+                  placeholder="Parola"
+                />
+              </div>
+          </div>
+            
+          
+        
+          <div class="mb-3">
+            <label for="firstName">İsim</label>
+            <div class="form-group">
+              <input
+                type="text"
+                id="firstName"
+                formControlName="firstName"
+                class="form-control"
+                placeholder="İsim"
+              />
+            </div>
+          </div>
 
-      <div class="form-floating">
-        <input
-        formControlName="firstName"
-          type="firstName"
-          class="form-control"
-          id="floatingInput"
-          placeholder="firstName"
-        />
-        <label for="floatingPassword">isism</label>
-      </div>
+          <div class="mb-3">
+            <label for="lastName">Soyisim</label>
+            <div class="form-group">
+              <input
+                type="text"
+                id="lastName"
+                formControlName="lastName"
+                class="form-control"
+                placeholder="Soyisim"
+              />
+            </div>
+          </div>
+          
+          
 
-      <div class="form-floating">
-        <input
-        formControlName="lastName"
-          type="lastName"
-          class="form-control"
-          id="floatingInput"
-          placeholder="lastName"
-        />
-        <label for="floatingPassword">Soyisim</label>
-      </div>
+            
+          
 
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me" /> Remember me
-        </label>
+        </form>
       </div>
-      <button class="w-100 btn btn-lg btn-primary" (click)="register()">
-        Giriş yap
-      </button>
-      <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
-    </form>
-  </main>
-</body>
+      <!-- <div class="card-footer">
+        <button type="button" class="btn btn-success" (click)="register()">Ekle</button>
+
+      </div> -->
+    </div>
+  </div>
+</div>
+
+
+
