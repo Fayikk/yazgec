@@ -9,13 +9,14 @@ import { AuthService } from 'src/app/service/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  loginForm:FormGroup
 
   constructor(private formBuilder:FormBuilder,
               private toastrService:ToastrService,
               private authService:AuthService
       ) { }
-  loginForm:FormGroup
   ngOnInit(): void {
+    this.createLoginForm()
   }
   createLoginForm(){
     this.loginForm = this.formBuilder.group({
@@ -28,9 +29,9 @@ export class LoginComponent implements OnInit {
 login(){
   if(this.loginForm.valid){
     console.log(this.loginForm.value);
-    let loginModel = Object.assign({},this.loginForm.value)
+    let loginmodel = Object.assign({},this.loginForm.value)
 
-    this.authService.login(loginModel).subscribe(response=>{
+    this.authService.login(loginmodel).subscribe(response=>{
       this.toastrService.info(response.message)
       localStorage.setItem("token",response.data.token)
     },responseError=>{
@@ -39,5 +40,4 @@ login(){
     })
   }
 }
-
 }

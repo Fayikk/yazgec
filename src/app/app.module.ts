@@ -16,6 +16,10 @@ import {ToastrModule} from "ngx-toastr";
 import { CategoryAddComponent } from './component/category-add/category-add.component';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthInterceptor } from './interceptor/auth.interceptor';
+
+
 
 @NgModule({
   declarations: [
@@ -37,11 +41,14 @@ import { RegisterComponent } from './component/register/register.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    BrowserAnimationsModule,
     ToastrModule.forRoot({
       positionClass:"toast-bottom-right"
     }),
   ],
-  providers: [],
+  providers: [{
+    provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
