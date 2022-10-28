@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/service/auth.service';
+import { RegisterService } from 'src/app/service/register.service';
 
 
 @Component({
@@ -13,7 +14,8 @@ export class RegisterComponent implements OnInit {
   // formBuilder: any;
   constructor(private authService:AuthService,
               private toastrService:ToastrService,
-              private formBuilder:FormBuilder
+              private formBuilder:FormBuilder,
+              private registerService:RegisterService
               ) { }
   registerForm:FormGroup
 
@@ -33,23 +35,23 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  // register(){
-  //   if(this.registerForm.valid){
-  //     let registermodel = Object.assign({},this.registerForm.value)
-  //     this.authService.register(registermodel).subscribe(response=>{
-  //       this.toastrService.success(response.message,"Success")
-  //     },responseError=>{
-  //       if(responseError.error.Errors.length>0){
-  //         for (let i = 0; i <responseError.error.Errors.length; i++) {
-  //           this.toastrService.error(responseError.error.Errors[i].ErrorMessage
-  //             ,"Validation error")
-  //         }       
-  //       } 
-  //     })
+  add(){
+    if(this.registerForm.valid){
+      let registerModel = Object.assign({},this.registerForm.value)
+      this.registerService.add(registerModel).subscribe(response=>{
+        this.toastrService.success(response.message,"Success")
+      },responseError=>{
+        if(responseError.error.Errors.length>0){
+          for (let i = 0; i <responseError.error.Errors.length; i++) {
+            this.toastrService.error(responseError.error.Errors[i].ErrorMessage
+              ,"Validation error")
+          }       
+        } 
+      })
       
-  //   }else{
-  //     this.toastrService.error("Form doesnt full","Caution")
-  //   }
+    }else{
+      this.toastrService.error("Form doesnt full","Caution")
+    }
     
-  // }
+  }
 }

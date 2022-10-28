@@ -1,19 +1,18 @@
 <div class="content">
   <div class="col-md-12">
     <div class="card">
-      <div class="card-header"><h5 class="title">Kaydol</h5></div>
+      <div class="card-header"><h5 class="title">Ürün Ekle</h5></div>
       <div class="card-body">
         <form [formGroup]="registerForm">
-
           <div class="mb-3">
-            <label for="email">E Mail</label>
+            <label for="email">mail</label>
             <div class="form-group">
               <input
-                type="string"
+                type="text"
                 id="email"
                 formControlName="email"
                 class="form-control"
-                placeholder="mail"
+                placeholder="Ürün adı"
               />
             </div>
           </div>
@@ -26,7 +25,7 @@
                   id="password"
                   formControlName="password"
                   class="form-control"
-                  placeholder="Parola"
+                  placeholder="Kategori"
                 />
               </div>
           </div>
@@ -37,39 +36,34 @@
             <label for="firstName">İsim</label>
             <div class="form-group">
               <input
-                type="text"
+                type="string"
                 id="firstName"
                 formControlName="firstName"
                 class="form-control"
-                placeholder="İsim"
+                placeholder="Stok Adedi"
               />
             </div>
           </div>
 
           <div class="mb-3">
-            <label for="lastName">Soyisim</label>
+            <label for="lastName">Soy isim</label>
             <div class="form-group">
               <input
-                type="text"
+                type="string"
                 id="lastName"
                 formControlName="lastName"
                 class="form-control"
-                placeholder="Soyisim"
+                placeholder="Fiyatı"
               />
             </div>
           </div>
-          
-          
-
-            
-          
 
         </form>
       </div>
-      <!-- <div class="card-footer">
-        <button type="button" class="btn btn-success" (click)="register()">Ekle</button>
+      <div class="card-footer">
+        <button type="button" class="btn btn-success" (click)="add()">Ekle</button>
 
-      </div> -->
+      </div>
     </div>
   </div>
 </div>

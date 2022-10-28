@@ -1,38 +1,42 @@
-<body class="text-center">
-  <main class="form-signin">
-    <form [formGroup]="loginForm">
-      <h1 class="h3 mb-3 fw-normal">Giriş yap</h1>
+<div class="wrapper fadeInDown" style="  position: absolute;
 
-      <div class="form-floating">
-        <input
-          formControlName="email"
-          type="email"
-          class="form-control"
-          id="floatingInput"
-          placeholder="name@example.com"
-        />
-        <label for="floatingInput">E-posta</label>
+left: 30px;
+top: 20px;">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" id="icon" alt="User Icon" />
       </div>
-      <div class="form-floating">
-        <input
+  
+      <!-- email:string
+    password:string -->
+
+
+      <!-- Login Form -->
+      <form [formGroup]="loginForm">
+        <input 
+        formControlName="email"
+                 type="text"
+                id="email" 
+                class="fadeIn second" 
+                name="login" 
+                placeholder="Mail Adresiniz">
+        <input 
         formControlName="password"
-          type="password"
-          class="form-control"
-          id="floatingPassword"
-          placeholder="Password"
-        />
-        <label for="floatingPassword">Parola</label>
+                  type="text" 
+                  id="password" 
+                  class="fadeIn third" 
+                    name="login" 
+                    placeholder="password">
+        <input type="submit" class="fadeIn fourth" value="Log In"  (click)="login()" routerLink="">
+      </form>
+      
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Forgot Password?</a>
       </div>
-
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me" /> Remember me
-        </label>
-      </div>
-      <button class="w-100 btn btn-lg btn-primary" (click)="login()">
-        Giriş yap
-      </button>
-      <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
-    </form>
-  </main>
-</body>
+  
+    </div>
+  </div>
