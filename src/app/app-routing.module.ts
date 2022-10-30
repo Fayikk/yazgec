@@ -16,6 +16,8 @@ const routes: Routes = [
   {path:"activity",component:QuestionComponent},
   {path:"login",component:LoginComponent},
   {path:"register",component:RegisterComponent},
+  {path:"question/detail/:categoryId",component:QuestionComponent},
+
 
 ];
 

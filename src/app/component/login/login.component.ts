@@ -36,6 +36,7 @@ login(){
       this.toastrService.info(response.message)
       localStorage.setItem("token",response.data.token)
     },responseError=>{
+      //console.log(responseError)
       this.toastrService.error(responseError.error)
     })
   }

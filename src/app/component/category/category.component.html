@@ -25,7 +25,7 @@
    -->
   <div class="list-group">
     <tbody *ngFor="let category of categories">
-    <a href="#" class="list-group-item list-group-item-action">
+    <a routerLink="/question/detail/{{category.categoryId}}" class="list-group-item list-group-item-action">
         {{category.categoryName}}
     </a>
 
