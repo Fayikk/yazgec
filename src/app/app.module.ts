@@ -18,6 +18,8 @@ import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
+import { CommentComponent } from './component/comment/comment.component';
+import { ImageComponent } from './component/image/image.component';
 
 
 
@@ -32,7 +34,9 @@ import { AuthInterceptor } from './interceptor/auth.interceptor';
     QuestionAddComponent,
     CategoryAddComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    CommentComponent,
+    ImageComponent
    
   ],
   imports: [

@@ -18,7 +18,7 @@ export class QuestionService {
   //apiUrl:"https://localhost:44325/api/Question/Add"
   //https://localhost:44325/api/Question/GetByQuestionDetail?Id=1
   //https://localhost:44325/api/Category/GetCategoryDetail?categoryId=2
-
+  //https://localhost:44325/api/Question/GetByCategoryId?id=3
   getQuestion():Observable<ListResponseModel<Question>>{
     return this.httpClient
     .get<ListResponseModel<Question>>(this.apiUrl+"/Question/GetAll")
@@ -28,7 +28,7 @@ export class QuestionService {
   }
 
   getQuestionByCategory(categoryId:number):Observable<ListResponseModel<Question>> {
-    let newPath = this.apiUrl + "/Category/GetCategoryDetail?categoryId="+categoryId
+    let newPath = this.apiUrl + "/Question/GetByCategoryId?id="+categoryId
     return this.httpClient.get<ListResponseModel<Question>>(newPath);
   }
 }

@@ -1,5 +1,5 @@
 export interface Question{
-    id:number
+    questionId:number
     description:string
     categoryId:number
     title:string
