@@ -23,12 +23,17 @@
     </tbody>
   </table>
    -->
-  <div class="list-group">
-    <tbody *ngFor="let category of categories">
-    <a routerLink="/question/detail/{{category.categoryId}}" class="list-group-item list-group-item-action">
-        {{category.categoryName}}
-    </a>
+   <ul></ul>
+  <div class="list-group" style="margin-right:250px ;">
+    <ul>
+      <tbody >
+        <a  *ngFor="let category of categories" routerLink="/question/detail/{{category.categoryId}}" class="list-group-item list-group-item-action">
+            {{category.categoryName}}
+        </a>
+    <button type="button" class="btn btn-warning" style="width:120px ; margin-left: 580px; margin-top:20px ;" routerLink="add">Kategori Ekle</button>
+        
+        </tbody>
+    </ul>
+    
 
-    </tbody>
-    <button type="button" class="btn btn-warning" style="width:120px ; margin:30px ;" routerLink="add">Kategori Ekle</button>
   </div>

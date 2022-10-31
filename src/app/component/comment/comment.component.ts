@@ -4,6 +4,7 @@ import { ToastrService } from 'ngx-toastr';
 import { Commment } from 'src/app/models/comment';
 import { QuestionDetailDto } from 'src/app/models/questionDetailDto';
 import { CommentService } from 'src/app/service/comment.service';
+import { ImageService } from 'src/app/service/image.service';
 
 @Component({
   selector: 'app-comment',
@@ -16,8 +17,9 @@ export class CommentComponent implements OnInit {
   
   constructor(private toastrService:ToastrService,
               private activatedRoute:ActivatedRoute,
-              private commentService:CommentService) { }
-
+              private commentService:CommentService,
+              private imageService:ImageService) { }
+    imagee:string="https://localhost:44325/uploads/images/"
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params=>{
       if(params["questionId"]){
