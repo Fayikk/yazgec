@@ -20,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { CommentComponent } from './component/comment/comment.component';
 import { ImageComponent } from './component/image/image.component';
+import { ImageAddComponent } from './component/image-add/image-add.component';
 
 
 
@@ -36,7 +37,8 @@ import { ImageComponent } from './component/image/image.component';
     LoginComponent,
     RegisterComponent,
     CommentComponent,
-    ImageComponent
+    ImageComponent,
+    ImageAddComponent
    
   ],
   imports: [

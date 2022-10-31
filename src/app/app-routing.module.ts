@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CategoryAddComponent } from './component/category-add/category-add.component';
 import { CategoryComponent } from './component/category/category.component';
 import { CommentComponent } from './component/comment/comment.component';
+import { ImageAddComponent } from './component/image-add/image-add.component';
 import { ImageComponent } from './component/image/image.component';
 import { LoginComponent } from './component/login/login.component';
 import { QuestionAddComponent } from './component/question-add/question-add.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path:"comment",component:CommentComponent},
  {path:"detail/:questionId",component:CommentComponent},
  {path:"image",component:ImageComponent},
+ {path:"image/add",component:ImageAddComponent},
 
 ];
 

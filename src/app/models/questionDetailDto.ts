@@ -4,7 +4,11 @@ export class QuestionDetailDto{
     questionId:number
     questionDescription:string
     title:string
+    userId:number
+    firstName:string
+    lastName:string
+    date:Date
     comment:Commment[]
-    imagee:Image[]
+    questionImage:Image[]
     
 }

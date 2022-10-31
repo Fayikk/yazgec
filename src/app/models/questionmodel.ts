@@ -3,4 +3,5 @@ export interface Question{
     description:string
     categoryId:number
     title:string
+    
 }

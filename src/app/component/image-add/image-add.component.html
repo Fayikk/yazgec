@@ -1,0 +1,39 @@
+
+<div>
+<form [formGroup]="imageAddForm" >
+
+  
+        <div class="form-group">
+          <label for="File">Example file input</label>
+          <input 
+          type="file" 
+          class="form-control-file" 
+          id="File"
+          formControlName="File"
+          >
+        </div>
+      
+
+      
+      <div class="mb-3">
+        <label for="questionId">Soru Numarası</label>
+          <div class="form-group">
+            <input
+              type="number"
+              id="questionId"
+              formControlName="questionId"
+              class="form-control"
+              placeholder="Sorun Numarası"
+            />
+          </div>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-success" (click)="add()">Ekle</button>
+
+      </div>
+
+</form>
+   
+</div>
+
+

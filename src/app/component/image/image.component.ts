@@ -29,6 +29,7 @@ serviceApi:"https://localhost:44340/uploads/images/"
 getImages(){
   this.imageService.getImages()
   .subscribe(Response=>{this.images=Response.data});
+  
 }
 
   getImageByDetail(questionId:number){
