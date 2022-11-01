@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ListResponseModel } from '../models/ListResponseModel';
+import { NumberDataResponseModel } from '../models/numberDataResponseModel';
 import { QuestionDetail } from '../models/quesitonDetail';
 import { Question } from '../models/questionmodel';
 import { ResponseModel } from '../models/ResponseModel';
@@ -23,8 +24,8 @@ export class QuestionService {
     return this.httpClient
     .get<ListResponseModel<Question>>(this.apiUrl+"/Question/GetAll")
   }
-  add(question:Question):Observable<ResponseModel>{
-    return this.httpClient.post<ResponseModel>(this.apiUrl+"/Question/Add",question)//burada hangi adrese ne göndereyim anlamına gelmektedir.
+  add(question:Question): Observable<NumberDataResponseModel<Question>>{
+    return this.httpClient.post<NumberDataResponseModel<Question>>(this.apiUrl+"/Question/Add",question)//burada hangi adrese ne göndereyim anlamına gelmektedir.
   }
 
   getQuestionByCategory(categoryId:number):Observable<ListResponseModel<Question>> {
