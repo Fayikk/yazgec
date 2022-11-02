@@ -12,7 +12,8 @@ import { QuestionService } from 'src/app/service/question.service';
 })
 export class QuestionAddComponent implements OnInit {
   questionAddForm : FormGroup
-
+  selectedFile: File 
+formData = new FormData();
   constructor(private formBuilder:FormBuilder,
               private toastrService:ToastrService,
               private questionService:QuestionService) { }
@@ -49,5 +50,12 @@ export class QuestionAddComponent implements OnInit {
       this.toastrService.error("Form doesnt full","Caution")
     }
     
+  }
+ 
+  onSelectFile(fileInput: any) {
+    for (let i = 0; i < fileInput.target.files.length; i++) {
+      let selectedFile = <File>fileInput.target.files[i];
+      this.formData.append('File', selectedFile)
+    }
   }
 }

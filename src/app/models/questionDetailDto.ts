@@ -1,5 +1,5 @@
 import { Commment } from "./comment"
-import { Image } from "./image"
+import { Image } from "./imagee"
 export class QuestionDetailDto{
     questionId:number
     questionDescription:string

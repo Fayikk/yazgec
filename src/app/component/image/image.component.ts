@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Image } from 'src/app/models/image';
+import { Image } from 'src/app/models/imagee';
 import { QuestionDetailDto } from 'src/app/models/questionDetailDto';
 import { ImageService } from 'src/app/service/image.service';
 

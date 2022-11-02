@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Commment } from 'src/app/models/comment';
-import { Image } from 'src/app/models/image';
+import { Image } from 'src/app/models/imagee';
 import { QuestionDetailDto } from 'src/app/models/questionDetailDto';
 import { Question } from 'src/app/models/questionmodel';
 import { CommentService } from 'src/app/service/comment.service';

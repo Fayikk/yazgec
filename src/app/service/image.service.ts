@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Image } from '../models/image';
+import { Image } from '../models/imagee';
 import { ListResponseModel } from '../models/ListResponseModel';
 import { QuestionDetailDto } from '../models/questionDetailDto';
 import { ResponseModel } from '../models/ResponseModel';
@@ -34,7 +34,7 @@ export class ImageService {
              get<SingleResponseModel<QuestionDetailDto>>(newPath)
         //gelen datayı productresponsemodele map edeceksin anlamına gelmektedir. 
   } 
-  add(image:Image):Observable<ResponseModel>{
+  add(image:FormData):Observable<ResponseModel>{
     return this.httpClient.post<ResponseModel>(this.addUrl,image)//burada hangi adrese ne göndereyim anlamına gelmektedir.
   }
 }

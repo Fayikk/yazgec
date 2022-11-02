@@ -23,17 +23,22 @@
     </tbody>
   </table>
    -->
-   <ul></ul>
-  <div class="list-group" style="margin-right:250px ;">
-    <ul>
-      <tbody >
-        <a  *ngFor="let category of categories" routerLink="/question/detail/{{category.categoryId}}" class="list-group-item list-group-item-action">
-            {{category.categoryName}}
-        </a>
-    <button type="button" class="btn btn-warning" style="width:120px ; margin-left: 580px; margin-top:20px ;" routerLink="add">Kategori Ekle</button>
-        
-        </tbody>
-    </ul>
-    
+  <div style="background-image:url(https://images.wallpaperscraft.com/image/single/surface_light_background_leaf_50523_2048x1152.jpg) ;">
+    <div class="list-group" style="margin-right:250px ; background-color: cadetblue;">
+      <ul>
+        <tbody >
+          <a  *ngFor="let category of categories" routerLink="/question/detail/{{category.categoryId}}" class="list-group-item list-group-item-action">
+              {{category.categoryName}}
+          </a>
+      <button type="button" class="btn btn-warning" style="width:120px ; margin-left: 580px; margin-top:20px ;" routerLink="add">Kategori Ekle</button>
+          
+          </tbody>
+      </ul>
+      
+  
+    </div>
 
   </div>
+  
+  
+  
