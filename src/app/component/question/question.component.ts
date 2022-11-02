@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { QuestionDetail } from 'src/app/models/quesitonDetail';
+import { QuestionDetailDto } from 'src/app/models/questionDetailDto';
 import { Question } from 'src/app/models/questionmodel';
 import { QuestionService } from 'src/app/service/question.service';
 
@@ -13,6 +14,9 @@ export class QuestionComponent implements OnInit {
   questions:Question[]=[]
   filterText="";
   questionDetail:QuestionDetail
+  questionDetailDto:QuestionDetailDto
+  dataLoaded=false;
+
   constructor(private questionService:QuestionService,private activatedRoute:ActivatedRoute) { }
  
   ngOnInit(): void {
@@ -36,6 +40,7 @@ export class QuestionComponent implements OnInit {
     this.questionService.getQuestionByCategory(categoryId)
     .subscribe(response=>{this.questions=response.data;
    });
+  this.dataLoaded=false;
    
    }
  

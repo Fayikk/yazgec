@@ -12,6 +12,7 @@ export class ImageAddService {
 
   constructor(private httpClient:HttpClient) { }
  Url=" https://localhost:44325/api/QuestionImage/add"
+ getUrl="https://localhost:44325/api/QuestionImage/GetAll"
 upload(file: File): Observable<HttpEvent<any>> {
   const formData: FormData = new FormData();
 
@@ -27,7 +28,7 @@ upload(file: File): Observable<HttpEvent<any>> {
 
 
 getFiles(): Observable<any> {
-  return this.httpClient.get(`${this.Url}`);
+  return this.httpClient.get(`${this.getUrl}`);
 }
 
 }

@@ -1,26 +1,49 @@
-<div class="mb-3">
-  <label for="filterText" class="form-label"></label>
-  <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="Soru Başlığı">
+
+<div
+*ngIf="dataLoaded == true"
+class="spinner-border text-danger"
+role="status"
+>
+<span class="visually-hidden">Loading...</span>
 </div>
-  <div class="accordion" id="accordionExample">
-    <div class="accordion-item" *ngFor="let question of questions | filterpipe:filterText">
-      <h2 class="accordion-header" id="{{question.questionId}}">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          {{question.title}}
-        </button>
-      </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-            {{question.description}}
-        </div>
-        <div >
-          <button type="button" class="btn btn-info" routerLink="/detail/{{question.questionId}}" style="margin-left: 850px;">Detaya Git</button>
-        </div>
-      </div>
-    </div>
+
+
+<div 
+  
+  class="container-fluid mt-100"
+  
+  >
+    <div class="row"
     
-  </div>
+    >
+        <div class="col-md-12"  *ngIf="dataLoaded == false">
+            <div class="card mb-4"  *ngFor="let question of questions | filterpipe:filterText"  >
+                <div class="card-header" >
+                    <div class="media flex-wrap w-100 align-items-center"> <img src="" class="d-block ui-w-40 rounded-circle" alt="">
+                        <div class="media-body ml-3"> <a href="javascript:void(0)" data-abc="true">
+                        
+                        </a>
+                            <div class="text-muted small">13 days ago</div>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p>
+                      {{question.title}} 
+                    </p>
+                    <p> 
+                      {{question.description}}
+                    </p>
+                </div>
+                <div class="card-footer d-flex flex-wrap justify-content-between align-items-center px-0 pt-0 pb-3">
+                    <div class="px-4 pt-3"> <a href="javascript:void(0)" class="text-muted d-inline-flex align-items-center align-middle" data-abc="true"> <i class="fa fa-heart text-danger"></i>&nbsp; <span class="align-middle">445</span> </a> <span class="text-muted d-inline-flex align-items-center align-middle ml-4"> <i class="fa fa-eye text-muted fsize-3"></i>&nbsp; <span class="align-middle">14532</span> </span> </div>
+                    <div class="px-4 pt-3"> <button type="button"  class="btn btn-primary" routerLink="/detail/{{question.questionId}}" ><i class="ion ion-md-create"></i>&nbsp; Detaya Git</button> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-
- 
+  
    

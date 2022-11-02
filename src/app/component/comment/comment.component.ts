@@ -18,6 +18,8 @@ export class CommentComponent implements OnInit {
   comments:Commment[]=[]
   detailDto:QuestionDetailDto
   questions:Question[]=[]
+  dataLoaded=false;
+
   constructor(private toastrService:ToastrService,
               private activatedRoute:ActivatedRoute,
               private commentService:CommentService,

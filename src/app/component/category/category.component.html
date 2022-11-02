@@ -23,7 +23,7 @@
     </tbody>
   </table>
    -->
-  <div style="background-image:url(https://images.wallpaperscraft.com/image/single/surface_light_background_leaf_50523_2048x1152.jpg) ;">
+  <!-- <div style="background-image:url(https://images.wallpaperscraft.com/image/single/surface_light_background_leaf_50523_2048x1152.jpg) ;">
     <div class="list-group" style="margin-right:250px ; background-color: cadetblue;">
       <ul>
         <tbody >
@@ -39,6 +39,29 @@
     </div>
 
   </div>
+   -->
   
-  
+
+  <section>
+    <div class="container" >
+        <div class="text-center margin-40px-bottom" >
+            <h3 class="no-margin-bottom">Top Job Categories</h3>
+        </div>
+        <div class="row"  >
+            <div class="col-lg-3 sm-margin-30px-bottom" style="margin-top: 25px;" *ngFor="let category of categories" >
+                <div class="h-100">
+                    <a  routerLink="/question/detail/{{category.categoryId}}" class="card bg-img box-hover cover-background border-0 p-4 h-100" style="background-image: url(https://www.gorspa.org/wp-content/uploads/iStock-918755218.jpg);">
+                        <div class="mt-auto position-relative z-index-9">
+                            <h5 class="text-white">
+                              {{category.categoryName}}
+                            </h5>
+                            <div class="position-relative z-index-9 text-white opacity6">120 jobs</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
   

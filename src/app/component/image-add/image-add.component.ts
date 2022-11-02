@@ -27,7 +27,7 @@ export class ImageAddComponent implements OnInit {
                }
 
   ngOnInit(): void {
-    this.fileInfos = this.imageAddService.getFiles();
+    // this.fileInfos = this.imageAddService.getFiles();
   }
   selectFile(event: any): void {
     this.selectedFiles = event.target.files;
@@ -48,8 +48,9 @@ export class ImageAddComponent implements OnInit {
             } else if (event instanceof HttpResponse) {
               this.message = event.body.message;
               this.fileInfos = this.imageAddService.getFiles();
+              
             }
-      console.log(this.selectedFiles)
+      
 
           },
           (err: any) => {
@@ -59,7 +60,7 @@ export class ImageAddComponent implements OnInit {
             if (err.error && err.error.message) {
               this.message = err.error.message;
             } else {
-              this.message = 'Could not upload the file!';
+              this.toastrService.error("Başarısız");
             }
 
             this.currentFile = undefined;
