@@ -1,0 +1,147 @@
+body{
+    margin-top:20px;
+    background:#eee;
+}
+.decor-default {
+    background-color: #ffffff;
+}
+.contact .controls {
+    position: relative;
+}
+
+.contact .controls .write {
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    bottom: -24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 5px #d8d8d8;
+    background: #39bee8  no-repeat 50% 50%;
+}
+.contact .controls .icon {
+    position: absolute;
+    z-index: 2;
+    top: 18px;
+    width: 16px;
+    height: 16px;
+    display: block;
+    cursor: pointer;
+}
+.contact .controls .cover {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    min-height: 150px;
+}
+.cover {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+.contact .controls .cont {
+    position: absolute;
+    z-index: 2;
+    top: 80px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.contact .controls .avatar {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    position: relative;
+    z-index: 2;
+}
+.contact .controls .name {
+    font-size: 20px;
+    line-height: 36px;
+    color: #ffffff;
+    margin: 0 0 10px;
+    position: relative;
+    z-index: 2;
+}
+.contact .controls .ui-mark {
+    display: inline-block;
+    border: 1px solid #ffffff;
+    font-size: 16px;
+    line-height: 32px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 2px;
+    padding: 0 26px;
+    border-radius: 2px;
+    position: relative;
+    z-index: 2;
+}
+
+.container-contact div[class^="col-"] {
+    position: relative;
+    min-height: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+.contact-description {
+    font-size: 16px;
+    line-height: 36px;
+}
+
+
+body{
+    margin-top:20px;
+    background:#eee;
+}
+@media (min-width: 0) {
+    .g-mr-15 {
+        margin-right: 1.07143rem !important;
+    }
+}
+@media (min-width: 0){
+    .g-mt-3 {
+        margin-top: 0.21429rem !important;
+    }
+}
+
+.g-height-50 {
+    height: 50px;
+}
+
+.g-width-50 {
+    width: 50px !important;
+}
+
+@media (min-width: 0){
+    .g-pa-30 {
+        padding: 2.14286rem !important;
+    }
+}
+
+.g-bg-secondary {
+    background-color: #fafafa !important;
+}
+
+.u-shadow-v18 {
+    box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.15);
+}
+
+.g-color-gray-dark-v4 {
+    color: #777 !important;
+}
+
+.g-font-size-12 {
+    font-size: 0.85714rem !important;
+}
+
+.media-comment {
+    margin-top:20px
+}
+
+section {
+    text-align: center;
+    padding: 20px 40px;
+  }

@@ -1,48 +1,134 @@
- <!-- <div class="card" style="width: 780px; height: 800px;">
-  <div style="font-size: 35px;">
-    {{detailDto.lastName}}
-    {{detailDto.firstName}}
+
+<div  class="container container-contact bootstrap snippets bootdeys bootdey"   style="margin-right: 90px;" >
+  <div class="row decor-default" style="position:relative ;">
+      <div class="col-md-12">
+        <div class="contact">
+          <div class="controls">
+            <span class="icon icon-folder" data-toggle="tooltip" data-placement="top" title="" data-original-title="Archive"></span>
+            <span class="icon icon-delete" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></span>
+            <span class="icon icon-close" data-toggle="tooltip" data-placement="top" title="" data-original-title="Close"></span>
+            <span class="write" data-toggle="tooltip" data-placement="top" title="" data-original-title="New"></span>
+           
+            <div class="">
+              <img  *ngFor="let image of detailDto?.questionImage" [src]="apiUrl+image.imagePath  " alt="cover" >
+            
+            </div>
+            <div >
+              <video *ngFor="let image of detailDto.questionImage"  controls  height=300 width=450>
+                <source [src]="apiUrl+image.imagePath"   >                   
+              </video>
+            </div>   
+          </div>
+  
+          <div  class="row" style="margin-left:180px ;"  >
+            <div class="col-md-4 col-md-5 col-xs-12" >
+              <!-- <div class="row"    >
+                <div class="col-xs-6" >
+               
+                  <strong>
+                  {{detailDto.firstName}} 
+                  {{detailDto.lastName}}
+
+
+                  </strong>
+
+                </div>
+                       
+                {{detailDto.date}}
+               
+                <div class="col-xs-3">
+                  <font style="font-size:20px ;">
+                    {{detailDto.questionDescription}}
+    
+                  </font> 
+              </div>
+              </div> -->
+            
+              <div class="row">
+                <div class="col-6 col-sm-3" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;">
+                  
+                  {{detailDto.firstName}}
+                </div>
+                <div class="col-6 col-sm-3" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                  {{detailDto.lastName}}
+                </div>
+              
+                <!-- Force next columns to break to new line -->
+                <div class="w-100"></div>
+              
+                <div class="col-20 col-sm-15" style="font-family: 'Times New Roman', Times, serif;">
+                  <p>
+                  {{detailDto.title}}
+
+                  </p>
+                </div>
+                <div class="col-20 col-sm-15" style="font-family:Verdana, Geneva, Tahoma, sans-serif ;">
+                      {{detailDto.questionDescription}}
+                </div>
+              </div>
+            
+            </div>
+            <div class="col-lg-8 col-md-7 col-xs-12" >
+              <p class="contact-description" >
+
+                {{detailDto.title}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- --------------------------------------------------- -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<div class="container"  style="margin-left: 200px ;" >
+<div class="row" >
+  <div class="col-md-8"  >
+      <div class="media g-mb-30 media-comment">
+          <img class="d-flex g-width-50 g-height-50 rounded-circle g-mt-3 g-mr-15" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Image Description">
+          <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30" *ngFor="let detail of detailDto.commentDetail">
+            <div class="g-mb-15">
+              <h5 class="h5 g-color-gray-dark-v1 mb-0">
+                {{detail.firstName}}
+                {{detail.lastName}}
+              </h5>
+              <span class="g-color-gray-dark-v4 g-font-size-12">
+
+                {{detail.date}
+              </span>
+            </div>
+      
+            <p>
+              
+              {{detail.theComment}}
+              
+            </p>
+      
+            <ul class="list-inline d-sm-flex my-0">
+              <li class="list-inline-item g-mr-20">
+                <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">
+                  <i class="fa fa-thumbs-up g-pos-rel g-top-1 g-mr-3"></i>
+                  50
+                </a>
+              </li>
+              <li class="list-inline-item g-mr-20">
+                <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">
+                  <i class="fa fa-thumbs-down g-pos-rel g-top-1 g-mr-3"></i>
+                  34
+                </a>
+              </li>
+              <li class="list-inline-item ml-auto">
+                <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">
+                  <i class="fa fa-reply g-pos-rel g-top-1 g-mr-3"></i>
+                  Reply
+                </a>
+              </li>
+            </ul>
+          </div>
+      </div>
   </div>
-  <div style="font-size: 20px; ;"
-  >
-  eklendiği tarih:
-  {{detailDto.date}}
-</div>
-
-   
-
-
-   
-    <img class="card-img-top" *ngFor="let image of detailDto?.questionImage" [src]="apiUrl+image.imagePath  " alt="Card image cap">
 
   
-    <div class="card-body">
-      <h5 class="card-title">
-
-      
-        <li>
-        {{detailDto?.title}}
-           
-        </li>
-      </h5>
-      <p class="card-text">
-        {{detailDto?.questionDescription}}    
-    </p>
-    </div>
-    <ul  class="list-group list-group-flush" >
-      <li class="list-group-item"*ngFor="let comment of detailDto.comment">
-        {{comment.theComment}}
-      </li>
-      <li class="list-group-item">
-       
-      </li>
-      <li class="list-group-item">Vestibulum at eros</li>
-      <button type="button" class="btn btn-info" style="margin-left:620px;">Yorum Yap</button>
-
-    </ul>
-    <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-    </div>
-  </div> 
- 
- -->
+</div>
+</div>
+</div>

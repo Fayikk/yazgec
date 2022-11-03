@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Commment } from 'src/app/models/comment';
+import { CommentDetail } from 'src/app/models/commentDetail';
 import { Image } from 'src/app/models/imagee';
 import { QuestionDetailDto } from 'src/app/models/questionDetailDto';
+import { QuestionDto } from 'src/app/models/questionDto';
 import { Question } from 'src/app/models/questionmodel';
 import { CommentService } from 'src/app/service/comment.service';
 import { ImageService } from 'src/app/service/image.service';
@@ -15,10 +17,13 @@ import { QuestionService } from 'src/app/service/question.service';
   styleUrls: ['./comment.component.css']
 })
 export class CommentComponent implements OnInit {
+  // detailDto:Any
   comments:Commment[]=[]
   detailDto:QuestionDetailDto
+  commentDto:CommentDetail[]=[]
   questions:Question[]=[]
-  dataLoaded=false;
+  // questionDto:QuestionDto
+
 
   constructor(private toastrService:ToastrService,
               private activatedRoute:ActivatedRoute,
@@ -30,6 +35,7 @@ export class CommentComponent implements OnInit {
     this.activatedRoute.params.subscribe(params=>{
       if(params["questionId"]){
         this.getCommentByQuestion(params["questionId"])
+        // this.getCommentByFull(params["questionId"])
       }else{
         this.getComment()
       }
@@ -39,7 +45,7 @@ export class CommentComponent implements OnInit {
     this.commentService.getComment()
     .subscribe(Response=>{
       this.comments=Response.data
-      console.log(Response.data)
+      // console.log(Response.data)
      });
   }
   getCommentByQuestion(questionId:number){
@@ -49,5 +55,11 @@ export class CommentComponent implements OnInit {
    });
    
    }
+
+   getCommentByFull(questionId:number){
+    this.commentService.getCommentByFull(questionId)
+    .subscribe(response=>{this.detailDto=response.data})
+
+  }
    
 }

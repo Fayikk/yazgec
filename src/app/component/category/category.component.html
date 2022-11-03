@@ -1,51 +1,10 @@
-<!-- <table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">Kategori Numarası</th>
-        <th scope="col">Kategori Adı</th>
-       
-      </tr>
-    </thead>
-    <tbody *ngFor="let category of categories">
-      <tr>
-        
 
-        <td>
-            {{category.id }}
-        </td>
-
-        <td style="font-style: italic;">
-            {{category.categoryName }}
-        </td>
-        
-      </tr>
-      
-    </tbody>
-  </table>
-   -->
-  <!-- <div style="background-image:url(https://images.wallpaperscraft.com/image/single/surface_light_background_leaf_50523_2048x1152.jpg) ;">
-    <div class="list-group" style="margin-right:250px ; background-color: cadetblue;">
-      <ul>
-        <tbody >
-          <a  *ngFor="let category of categories" routerLink="/question/detail/{{category.categoryId}}" class="list-group-item list-group-item-action">
-              {{category.categoryName}}
-          </a>
-      <button type="button" class="btn btn-warning" style="width:120px ; margin-left: 580px; margin-top:20px ;" routerLink="add">Kategori Ekle</button>
-          
-          </tbody>
-      </ul>
-      
-  
-    </div>
-
-  </div>
-   -->
   
 
   <section>
     <div class="container" >
         <div class="text-center margin-40px-bottom" >
-            <h3 class="no-margin-bottom">Top Job Categories</h3>
+            <h3 class="no-margin-bottom"><strong>Kategoriler</strong></h3>
         </div>
         <div class="row"  >
             <div class="col-lg-3 sm-margin-30px-bottom" style="margin-top: 25px;" *ngFor="let category of categories" >
@@ -60,8 +19,10 @@
                     </a>
                 </div>
             </div>
-            
         </div>
+
     </div>
+
 </section>
+
   
