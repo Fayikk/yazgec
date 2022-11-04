@@ -56,10 +56,10 @@ export class CommentComponent implements OnInit {
    
    }
 
-   getCommentByFull(questionId:number){
-    this.commentService.getCommentByFull(questionId)
-    .subscribe(response=>{this.detailDto=response.data})
+  //  getCommentByFull(questionId:number){
+  //   this.commentService.getCommentByFull(questionId)
+  //   .subscribe(response=>{this.detailDto=response.data})
 
-  }
+  // }
    
 }

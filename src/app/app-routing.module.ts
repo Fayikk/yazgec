@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CategoryAddComponent } from './component/category-add/category-add.component';
 import { CategoryComponent } from './component/category/category.component';
+import { CommentAddComponent } from './component/comment-add/comment-add.component';
 import { CommentComponent } from './component/comment/comment.component';
 import { ImageAddComponent } from './component/image-add/image-add.component';
 import { ImageComponent } from './component/image/image.component';
@@ -24,6 +25,8 @@ const routes: Routes = [
  {path:"detail/:questionId",component:CommentComponent},
  {path:"image",component:ImageComponent},
  {path:"image/add",component:ImageAddComponent},
+ {path:"comment/add",component:CommentAddComponent},
+
 
 ];
 

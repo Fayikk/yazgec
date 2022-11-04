@@ -17,6 +17,9 @@ export class CommentService {
 //https://localhost:44325/api/Comment/GetAll
 //https://localhost:44325/api/Question/getQuestionDetail?QuestionId=2
 //https://localhost:44325/api/Comment/getCommentDetail?Questionid=1
+//https://localhost:44325/api/Comment/Add
+
+
 apiUrl="https://localhost:44325/api"
 
 getComment():Observable<ListResponseModel<Commment>>{
@@ -28,9 +31,9 @@ getComment():Observable<ListResponseModel<Commment>>{
     return this.httpClient.get<SingleResponseModel<QuestionDetailDto>>(newPath);
   }
 
-  getCommentByFull(questionId:number):Observable<SingleResponseModel<QuestionDetailDto>>
-  {
-    let newPath=this.apiUrl+"/Comment/getCommentDetail?Questionid="+questionId
-    return this.httpClient.get<SingleResponseModel<QuestionDetailDto>>(newPath)
+  add(comment:Commment): Observable<ListResponseModel<Commment>>{
+    return this.httpClient.post<ListResponseModel<Commment>>(this.apiUrl+"/Comment/Add",comment)//burada hangi adrese ne göndereyim anlamına gelmektedir.
   }
+
+
 }

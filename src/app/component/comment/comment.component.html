@@ -1,134 +1,117 @@
-
-<div  class="container container-contact bootstrap snippets bootdeys bootdey"   style="margin-right: 90px;" >
-  <div class="row decor-default" style="position:relative ;">
-      <div class="col-md-12">
-        <div class="contact">
-          <div class="controls">
-            <span class="icon icon-folder" data-toggle="tooltip" data-placement="top" title="" data-original-title="Archive"></span>
-            <span class="icon icon-delete" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></span>
-            <span class="icon icon-close" data-toggle="tooltip" data-placement="top" title="" data-original-title="Close"></span>
-            <span class="write" data-toggle="tooltip" data-placement="top" title="" data-original-title="New"></span>
-           
-            <div class="">
-              <img  *ngFor="let image of detailDto?.questionImage" [src]="apiUrl+image.imagePath  " alt="cover" >
-            
-            </div>
-            <div >
-              <video *ngFor="let image of detailDto.questionImage"  controls  height=300 width=450>
-                <source [src]="apiUrl+image.imagePath"   >                   
-              </video>
-            </div>   
-          </div>
-  
-          <div  class="row" style="margin-left:180px ;"  >
-            <div class="col-md-4 col-md-5 col-xs-12" >
-              <!-- <div class="row"    >
-                <div class="col-xs-6" >
-               
-                  <strong>
-                  {{detailDto.firstName}} 
-                  {{detailDto.lastName}}
+<!-- 
 
 
-                  </strong>
 
-                </div>
-                       
-                {{detailDto.date}}
-               
-                <div class="col-xs-3">
-                  <font style="font-size:20px ;">
-                    {{detailDto.questionDescription}}
-    
-                  </font> 
-              </div>
-              </div> -->
-            
-              <div class="row">
-                <div class="col-6 col-sm-3" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;">
-                  
-                  {{detailDto.firstName}}
-                </div>
-                <div class="col-6 col-sm-3" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-                  {{detailDto.lastName}}
-                </div>
-              
-                <!-- Force next columns to break to new line -->
-                <div class="w-100"></div>
-              
-                <div class="col-20 col-sm-15" style="font-family: 'Times New Roman', Times, serif;">
-                  <p>
-                  {{detailDto.title}}
 
-                  </p>
-                </div>
-                <div class="col-20 col-sm-15" style="font-family:Verdana, Geneva, Tahoma, sans-serif ;">
-                      {{detailDto.questionDescription}}
-                </div>
-              </div>
-            
-            </div>
-            <div class="col-lg-8 col-md-7 col-xs-12" >
-              <p class="contact-description" >
 
-                {{detailDto.title}}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
+<!-- this form is for Question!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1 -->
+
+<div class="answer-card card mb-5">
+  <!-- Card header -->
+  <div class="card-header forum-card-img-30 d-flex justify-content-between border-0" style="background-color:antiquewhite ;">
+    <p class="pt-2 mb-0">
+      <img src="https://s.gravatar.com/avatar/4cf642822dc5caf650facd79b8f64a95?s=96&amp;d=mm&amp;r=g" alt="" class="rounded-circle mr-2">
+      <strong><a href="https://mdbootstrap.com/support/?user=15082/" target="_blank">
+        {{detailDto.firstName}}
+        {{detailDto.lastName}}
+      </a></strong>
+      <!-- <span class="badge badge-primary mx-1">staff</span> -->
+        <span title="4/27/2018, 9:05:25 AM">
+          {{detailDto.date}}
+        </span>
+    </p>
+    <div>
+      
+        <a href="#" type="button" class="btn btn-success btn-sm px-2 waves-effect show_login">
+          <span class="value">
+            4
+          </span>
+          <i class="fas fa-thumbs-up ml-1"></i>
+        </a>
+        <a href="#" type="button" class="btn btn-danger btn-sm px-2 waves-effect show_login">
+          <span class="value">
+            0
+          </span>
+          <i class="fas fa-thumbs-down ml-1"></i>
+        </a>
+      
+      
+        <a href="javascript:void(0)" type="button" class="btn btn-secondary btn-sm px-2 waves-effect is-hidden">
+          Best answer
+          <i class="fas fa-check ml-1"></i>
+        </a>
+      
     </div>
-
-<!-- --------------------------------------------------- -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<div class="container"  style="margin-left: 200px ;" >
-<div class="row" >
-  <div class="col-md-8"  >
-      <div class="media g-mb-30 media-comment">
-          <img class="d-flex g-width-50 g-height-50 rounded-circle g-mt-3 g-mr-15" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Image Description">
-          <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30" *ngFor="let detail of detailDto.commentDetail">
-            <div class="g-mb-15">
-              <h5 class="h5 g-color-gray-dark-v1 mb-0">
-                {{detail.firstName}}
-                {{detail.lastName}}
-              </h5>
-              <span class="g-color-gray-dark-v4 g-font-size-12">
-
-                {{detail.date}
-              </span>
-            </div>
-      
-            <p>
-              
-              {{detail.theComment}}
-              
-            </p>
-      
-            <ul class="list-inline d-sm-flex my-0">
-              <li class="list-inline-item g-mr-20">
-                <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">
-                  <i class="fa fa-thumbs-up g-pos-rel g-top-1 g-mr-3"></i>
-                  50
-                </a>
-              </li>
-              <li class="list-inline-item g-mr-20">
-                <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">
-                  <i class="fa fa-thumbs-down g-pos-rel g-top-1 g-mr-3"></i>
-                  34
-                </a>
-              </li>
-              <li class="list-inline-item ml-auto">
-                <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">
-                  <i class="fa fa-reply g-pos-rel g-top-1 g-mr-3"></i>
-                  Reply
-                </a>
-              </li>
-            </ul>
-          </div>
-      </div>
   </div>
 
+  <hr class="m-0">
+
+  <div class="card-body answer-form-item is-hidden">
+    <!-- Default form reply -->
+    <form data-answer-id="57061" style="font-size:24px ;" class="needs-validation edit-answer-form" novalidate="">
+      <strong>
+      {{detailDto.title}}
+
+      </strong>
+    
+    </form>
+    <!-- Default form reply -->
+  </div>
+  <!--Card content-->
+  <a href="javascript:void(0)" style="background-color: white; border-color: white;" type="button" class="btn btn-secondary btn-sm px-2 waves-effect is-hidden">
+    <img style="width: 480px ; height: 480px; ;"  *ngFor="let image of detailDto?.questionImage" [src]="apiUrl+image.imagePath  " alt="cover" >
+
+    <i class="fas fa-check ml-1"></i>
+  </a>
+  <div class="card-body answer-form-item">
+    {{detailDto.questionDescription}}
+      <hr>
+    
+    <!-- Comments -->
+    <div class="comment-card ml-5">
+      
+      
+      
+        
+        <div class="form-group mb-0">
+          
+            <a routerLink="/comment/add" class="btn btn-primary btn-sm ml-0 comment-form-toggle show_login waves-effect waves-light">Add comment</a>
+          
+        </div>
+      
+    </div>
+    <!-- Comments -->
+  </div>
   
 </div>
-</div>
-</div>
+
+
+
+
+<!-- this form is for comment -->
+
+<div class="answer-card card mb-5"  *ngFor="let detail of detailDto.comment">
+  <!-- Card header -->
+  <div class="card-header forum-card-img-30 d-flex justify-content-between border-0">
+    <p class="pt-2 mb-0">
+      <img src="" alt="" class="rounded-circle mr-2">
+      <strong><a href="https://mdbootstrap.com/support/?user=15082/" target="_blank"></a></strong>
+      <span class="badge badge-primary mx-1">staff</span>
+        <span title="4/27/2018, 9:05:25 AM">
+          {{detail.date}}
+        </span>
+    </p>
+  </div>
+
+  <hr class="m-0">
+
+  <div class="card-body answer-form-item is-hidden">
+    <!-- Default form reply -->
+    <form data-answer-id="57061" class="needs-validation edit-answer-form" novalidate="">
+      {{detail.theComment}}
+    
+    </form>
+    </div>
+  </div>

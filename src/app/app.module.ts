@@ -21,6 +21,7 @@ import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { CommentComponent } from './component/comment/comment.component';
 import { ImageComponent } from './component/image/image.component';
 import { ImageAddComponent } from './component/image-add/image-add.component';
+import { CommentAddComponent } from './component/comment-add/comment-add.component';
 // import  {numberDataResponseModel}
 
 
@@ -38,7 +39,8 @@ import { ImageAddComponent } from './component/image-add/image-add.component';
     RegisterComponent,
     CommentComponent,
     ImageComponent,
-    ImageAddComponent
+    ImageAddComponent,
+    CommentAddComponent
    
   ],
   imports: [

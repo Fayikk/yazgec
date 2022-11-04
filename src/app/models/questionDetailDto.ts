@@ -10,6 +10,6 @@ export interface QuestionDetailDto{
     lastName:string
     date:Date 
     questionImage:Image[]
-    commentDetail:CommentDetail[]
+    comment:Commment[]
     
 }

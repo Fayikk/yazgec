@@ -33,8 +33,8 @@ export class CategoryAddComponent implements OnInit {
   }
   add(){
     if(this.categoryAddForm.valid){
-      let questionModel = Object.assign({},this.categoryAddForm.value)
-      this.categoryService.add(questionModel).subscribe(response=>{
+      let categoryModel = Object.assign({},this.categoryAddForm.value)
+      this.categoryService.add(categoryModel).subscribe(response=>{
         this.toastrService.success(response.message,"Success")
       },responseError=>{
         if(responseError.error.Errors.length>0){
