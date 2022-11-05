@@ -20,6 +20,7 @@ export class QuestionService {
   //https://localhost:44325/api/Question/GetByQuestionDetail?Id=1
   //https://localhost:44325/api/Category/GetCategoryDetail?categoryId=2
   //https://localhost:44325/api/Question/GetByCategoryId?id=3
+  //https://localhost:44325/api/Question/QuestionCount?categoryId=2
   getQuestion():Observable<ListResponseModel<Question>>{
     return this.httpClient
     .get<ListResponseModel<Question>>(this.apiUrl+"/Question/GetAll")
@@ -32,4 +33,16 @@ export class QuestionService {
     let newPath = this.apiUrl + "/Question/GetByCategoryId?id="+categoryId
     return this.httpClient.get<ListResponseModel<Question>>(newPath);
   }
+
+
+  getByCategoryId(categoryId:number):Observable<ResponseModel> {
+    let newPath = this.apiUrl + "/Question/GetByCategoryId?id="+categoryId
+    return this.httpClient.get<ResponseModel>(newPath);
+  }
+
+  getQuestionCount(categoryId:number):Observable<ListResponseModel<Question>> {
+    let newPath = this.apiUrl + "/Question/QuestionCount?categoryId="+categoryId
+    return this.httpClient.get<ListResponseModel<Question>>(newPath);
+  }
+
 }

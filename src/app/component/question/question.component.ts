@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { QuestionDetail } from 'src/app/models/quesitonDetail';
 import { QuestionDetailDto } from 'src/app/models/questionDetailDto';
 import { Question } from 'src/app/models/questionmodel';
+import { ResponseModel } from 'src/app/models/ResponseModel';
 import { QuestionService } from 'src/app/service/question.service';
 
 @Component({
@@ -12,6 +13,7 @@ import { QuestionService } from 'src/app/service/question.service';
 })
 export class QuestionComponent implements OnInit {
   questions:Question[]=[]
+  
   filterText="";
   questionDetail:QuestionDetail
   questionDetailDto:QuestionDetailDto
@@ -42,6 +44,14 @@ export class QuestionComponent implements OnInit {
    });
   this.dataLoaded=false;
    
+   }
+
+   getByCategoryId(categoryId:number){
+
+    this.questionService.getByCategoryId(categoryId)
+    .subscribe(response=>{response.message;
+   });
+
    }
  
 }

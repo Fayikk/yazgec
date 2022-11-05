@@ -12,6 +12,7 @@ export class CategoryService {
 
   constructor(private httpClient:HttpClient) { }
 //https://localhost:44325/api/Category/Add
+//https://localhost:44325/api/Question/GetByCategoryId?id=1
   apiUrl="https://localhost:44325/api"
 
   getCategory():Observable<ListResponseModel<Category>>{
@@ -21,4 +22,8 @@ export class CategoryService {
   add(category:Category):Observable<ResponseModel>{
     return this.httpClient.post<ResponseModel>(this.apiUrl+"/Category/Add",category)//burada hangi adrese ne göndereyim anlamına gelmektedir.
   }
+
+  
+  
+
 }
