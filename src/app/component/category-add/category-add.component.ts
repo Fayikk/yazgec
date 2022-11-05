@@ -26,7 +26,7 @@ export class CategoryAddComponent implements OnInit {
       //ürün eklerke formda olmasını istediğimiz alanları burada configure edeceğiz.
       
       categoryName: ['', Validators.required],
-      categoryId: ['', Validators.required],
+      // categoryId: ['', Validators.required],
       //html'imizde hangi alanlar map edilecek ve o alandaki kurallar nelerdir .
       //Bu alan onunla ilgilenmektedir.
     });
