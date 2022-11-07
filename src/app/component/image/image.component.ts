@@ -16,9 +16,11 @@ import { ImageService } from 'src/app/service/image.service';
 export class ImageComponent implements OnInit {
   images:Image[]=[]
   detailsDto:QuestionDetailDto
+  title:string="this is trying text"
   constructor(private activatedRoute:ActivatedRoute,
               private toastrService:ToastrService,
-              private imageService:ImageService) { }
+              private imageService:ImageService
+              ) { }
 
   ngOnInit(): void {
     this.getImages()
